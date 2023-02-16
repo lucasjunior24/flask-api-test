@@ -1,0 +1,8 @@
+.venv
+.pytest_cache
+**/__pycache__
+storage.db
+.pytest_cache
+venv
+**/venv
+**/.venv
