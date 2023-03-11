@@ -1,11 +1,27 @@
 from flask import Flask, request
-
+import time
 from app.repo.user_repo import UserRepository
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=['GET'])
 def hello_world():
+    # pause = 0
+    # startTime = time.time()
+    # print(startTime)
+    # for i in range(0,5):
+    #     print(i)
+    #     # making delay for 1 second
+    #     time.sleep(1)
+    # endTime = time.time()
+    # print(endTime)
+    # elapsedTime = endTime - startTime
+    # print("Elapsed Time = %s" % elapsedTime)
+
+    # while True:
+    #     pause += 1
+    #     print(str(pause))
+    #     time.sleep(2)
     return "Hello, World!"
 
 
@@ -24,7 +40,5 @@ def get_user():
     repo = user_repo.get_by_id(params["id"])
     return repo
     
-    
-
 
 app.run(debug=True)
